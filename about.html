@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SupClothings/shop</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+      color: #111;
+    }
+    header {
+      background-color: #f4f4f4;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header img {
+      height: 100px;
+    }
+    nav a {
+      color: #111;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    nav a:hover {
+      color: #0077cc;
+    }
+    .shop-container {
+      display: flex;
+    }
+    .sidebar {
+      width: 300px;
+      height: 100vh;
+      padding: 20px;
+      background-color: #f4f4f4;
+      border-right: 1px solid #ddd;
+      position: sticky;
+      top: 0;
+    }
+    .sidebar h3 {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+    .sidebar ul li {
+      margin-bottom: 10px;
+    }
+    .sidebar ul li a {
+      text-decoration: none;
+      color: #0077cc;
+      font-weight: 600;
+    }
+    .sidebar ul li a:hover {
+      text-decoration: underline;
+    }
+    .search-bar {
+      margin-top: 20px;
+    }
+    .search-bar input {
+      width: calc(100% - 50px);
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    .search-bar button {
+      padding: 10px 15px;
+      background-color: #0077cc;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .search-bar button:hover {
+      background-color: #005fa3;
+    }
+    .content {
+      flex: 1;
+      padding: 20px;
+    }
+    .content h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+    .content p {
+      font-size: 18px;
+      margin-bottom: 40px;
+      color: #444;
+    }
+    .middle-image {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .middle-image img {
+      width: 80%;
+      max-width: 600px;
+      border-radius: 10px;
+    }
+    .row-image {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    .row-image img {
+      width: 150px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .about-hero {
+      text-align: center;
+      background-color: #0077cc;
+      color: #fff;
+      padding: 50px 20px;
+    }
+    .about-hero h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+    .about-hero p {
+      font-size: 20px;
+      margin: 0;
+    }
+    .about-story {
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .about-story h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    .about-story p {
+      font-size: 18px;
+      color: #444;
+      margin-bottom: 30px;
+    }
+    .about-story img {
+      width: 80%;
+      max-width: 600px;
+      border-radius: 10px;
+    }
+    .about-team {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: #f9f9f9;
+    }
+    .about-team h2 {
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
+    .team-members {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    .team-member {
+      text-align: center;
+      max-width: 200px;
+    }
+    .team-member img {
+      width: 100%;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+    .team-member h3 {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+    .team-member p {
+      font-size: 16px;
+      color: #666;
+    }
+    .about-cta {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: #0077cc;
+      color: #fff;
+    }
+    .about-cta h2 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+    .about-cta p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    .cta-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #fff;
+      color: #0077cc;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 4px;
+    }
+    .cta-button:hover {
+      background-color: #005fa3;
+      color: #fff;
+    }
+    footer {
+      background-color: #f4f4f4;
+      color: #444;
+      text-align: center;
+      padding: 20px 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="SupClothings_logo.png" alt="SupClothings Logo">
+    <nav>
+      <a href="">Home</a>
+      <a href="/shop">Shop</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </header>
+  <div class="about-hero">
+    <h1>About Us</h1>
+    <p>Your trusted partner in fashion and style.</p>
+  </div>
+  <div class="about-story">
+    <h2>Our Story</h2>
+    <p>SupClothings began with a simple yet powerful vision: to create a fashion brand that brings comfort, style, and confidence to everyday people—no matter their age or background. What started as a small idea among friends with a passion for fashion quickly grew into a movement to redefine casualwear for the whole family.
+
+      We noticed something missing in the market—clothing that looked good, felt good, and was made for everyone. So we stepped in to fill that gap. From the beginning, our mission was clear: to design clothes and shoes that speak to the modern lifestyle of men, women, kids, and teens—without compromising on quality or affordability.
+      
+      SupClothings isn’t just about what you wear—it’s about how you feel when you wear it. It’s about confidence at school, comfort on the weekend, and style that doesn’t try too hard. It’s about moms and dads finding pieces they love just as much as their kids do.
+      
+      Most of all, it’s about people. That’s why we go the extra mile to serve our customers like family. Whether it's through thoughtful designs, helpful support, or a smooth shopping experience, we’re here to make sure you always feel seen, valued, and stylish.
+      
+      Welcome to SupClothings—where everyday style meets everyday people.</p>
+    <img src="store.png" alt="Our Story">
+  </div>
+  <div class="about-team">
+    <h2>Meet Our Team</h2>
+    <div class="team-members">
+      <div class="team-member">
+        <img src="ceo.png" alt="George Aziz">
+        <h3>George Aziz</h3>
+        <p>Founder & CEO</p>
+      </div>
+      <div class="team-member">
+        <img src="founder.png" alt="John Smith">
+        <h3>Jane Smith</h3>
+        <p>Creative Director</p>
+      </div>
+    </div>
+  </div>
+  <div class="about-cta">
+    <h2>Join Our Journey</h2>
+    <p>Be part of our story and explore the latest in fashion.</p>
+    <a href="shop.html" class="cta-button">Shop Now</a>
+  </div>
+  <footer>
+    <p>&copy; 2025 SupClothings. All rights reserved.</p>
+    <p>Follow us on <a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="#">X</a></p>
+    <p>Contact us: <a href="mailto:SupClothings@gmail.com">SupClothings@gmail.com</a></p>
+  </footer>
+</body>
+</html>
