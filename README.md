@@ -37,5 +37,5 @@ SupClothings is a stylish and responsive clothing brand website built using HTML
 
 If you’re interested in working together or need a similar website built, feel free to reach out:
 
-📧 SupClothings@gmail.com  
+📧 gorgeaziz63@gmail.com  
 💼 Freelance Services: Web development, Python scripting, video editing
